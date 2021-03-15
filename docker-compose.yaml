@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+    music-server:
+        image: php:7.3-apache
+        ports:
+            - 9020:80
+        restart: unless-stopped
+        volumes:
+            - ./DocumentRoot:/var/www/html
+            - /shares/Media/Books:/var/www/html/Books

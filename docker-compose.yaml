@@ -8,4 +8,4 @@ services:
         restart: unless-stopped
         volumes:
             - ./DocumentRoot:/var/www/html
-            - /shares/Media/Books:/var/www/html/Books
+            - /local/path/to/Books:/var/www/html/Books

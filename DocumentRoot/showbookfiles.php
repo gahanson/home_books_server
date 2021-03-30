@@ -11,8 +11,10 @@ function getDirContents($path) {
     return $files;
 }
 
+// needed for CORS
 header("Access-Control-Allow-Origin: *");
 
+// assume book files directory bind mounted to document root directory
 echo json_encode(getDirContents("./Books"));
 
 ?>
